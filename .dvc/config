@@ -1,0 +1,4 @@
+[core]
+    remote = data
+['remote "data"']
+    url = gs://omar_bucket_mlops/dvcstore
