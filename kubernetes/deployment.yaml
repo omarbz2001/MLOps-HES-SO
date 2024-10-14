@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: celestial-bodies-classifier-deployment
+  labels:
+    app: celestial-bodies-classifier
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: celestial-bodies-classifier
+  template:
+    metadata:
+      labels:
+        app: celestial-bodies-classifier
+    spec:
+      containers:
+      - name: celestial-bodies-classifier
+        image: europe-west1-docker.pkg.dev//omarbz2001/celestial-bodies-classifier:latest
